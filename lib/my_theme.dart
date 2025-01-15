@@ -3,10 +3,15 @@ import 'package:flutter/material.dart';
 class MyTheme{
   static Color primaryColor = Color(0xffB7935F);
   static Color blackColor = Color(0xff242424);
+  static Color whiteColor = Color(0xffF8F8F8);
  static ThemeData lightMode = ThemeData(
    primaryColor: primaryColor,
    scaffoldBackgroundColor: Colors.transparent,
    appBarTheme: AppBarTheme(
+     iconTheme: IconThemeData(
+       color: blackColor,
+       size: 30
+     ),
      backgroundColor: Colors.transparent,
      elevation: 0,
      centerTitle: true,
@@ -15,13 +20,12 @@ class MyTheme{
        fontFamily: "ElMessiri",
        fontWeight: FontWeight.w700,
        color:blackColor
-
      )
  ),
    bottomNavigationBarTheme: BottomNavigationBarThemeData(
      type: BottomNavigationBarType.fixed,
      backgroundColor: primaryColor,
-       unselectedItemColor: Color(0xffF8F8F8),
+       unselectedItemColor: whiteColor,
      selectedItemColor: blackColor,
      showSelectedLabels: true,
      showUnselectedLabels: false,
@@ -32,6 +36,28 @@ class MyTheme{
          color: Color(0xffF8F8F8)
        )
    ),
+   dividerTheme: DividerThemeData(
+     color: primaryColor,
+     thickness: 2
+   ),
+
+   textTheme: TextTheme(
+     titleLarge: TextStyle(
+       fontSize: 25,
+       fontFamily: "ElMessiri",
+       fontWeight: FontWeight.w600,
+       color: blackColor
+     ),
+       titleMedium: TextStyle(
+           fontSize: 25,
+           fontWeight: FontWeight.w400,
+           color: blackColor
+       ),
+     titleSmall: TextStyle(
+       fontSize: 20,
+       fontWeight: FontWeight.w400,
+     )
+   )
 
 
  );

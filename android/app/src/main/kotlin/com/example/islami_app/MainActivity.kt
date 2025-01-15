@@ -1,8 +1,5 @@
-//package com.example.islami_app
-//
-//import io.flutter.embedding.android.FlutterActivity
-//
-//class MainActivity: FlutterActivity()
+package com.example.islami_app
+
 import android.os.Build
 import android.os.Bundle
 import androidx.core.view.WindowCompat

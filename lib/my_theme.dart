@@ -40,7 +40,10 @@ class MyTheme{
      color: primaryColor,
      thickness: 2
    ),
-
+iconTheme: IconThemeData(
+  color: primaryColor,
+  size: 50
+),
    textTheme: TextTheme(
      titleLarge: TextStyle(
        fontSize: 25,

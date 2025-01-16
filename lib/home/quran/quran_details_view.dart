@@ -52,7 +52,8 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
                           ),
                           Icon(
                             Icons.play_circle_fill,
-                            size: 30,
+                            color: MyTheme.blackColor,
+                            size: 40,
                           )
                         ],
                       ),

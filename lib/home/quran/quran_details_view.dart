@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/home/quran/item_sura_details.dart';
 import 'package:islami_app/my_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranDetailsView extends StatefulWidget {
   final String name;
@@ -30,7 +31,7 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
           ),
           Scaffold(
             appBar: AppBar(
-              title: Text('إسلامي'),
+              title: Text(AppLocalizations.of(context)!.app_title),
             ),
             body: verses.isEmpty
                 ? Center(child: CircularProgressIndicator(color: MyTheme.lightMode.primaryColor,))

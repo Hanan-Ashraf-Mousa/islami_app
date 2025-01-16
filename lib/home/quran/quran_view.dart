@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/home/quran/quran_details_view.dart';
 import 'package:islami_app/my_theme.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class QuranView extends StatelessWidget {
   QuranView({super.key});
 
@@ -138,7 +138,7 @@ class QuranView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              'عدد الآيات',
+              AppLocalizations.of(context)!.verses_number,
               style: theme.textTheme.titleLarge,
             ),
             Container(
@@ -147,7 +147,7 @@ class QuranView extends StatelessWidget {
               color: theme.primaryColor,
             ),
             Text(
-              'اسم السورة',
+              AppLocalizations.of(context)!.sura_name,
               style: theme.textTheme.titleLarge,
             ),
           ],

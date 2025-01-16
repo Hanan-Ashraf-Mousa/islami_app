@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/home/hadeth/hadeth_view.dart';
 import 'package:islami_app/my_theme.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HadethDetailsView extends StatelessWidget {
   static String routeName = "hadeth";
 
@@ -21,7 +21,7 @@ class HadethDetailsView extends StatelessWidget {
         ),
         Scaffold(
           appBar: AppBar(
-            title: Text('إسلامي'),
+            title: Text(AppLocalizations.of(context)!.app_title),
           ),
           body: Container(
             margin: EdgeInsets.symmetric(

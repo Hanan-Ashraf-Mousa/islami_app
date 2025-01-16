@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/home/hadeth/hadeth_details_view.dart';
 import 'package:islami_app/my_theme.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HadethView extends StatefulWidget {
   HadethView({super.key});
 
@@ -23,7 +23,7 @@ class _HadethViewState extends State<HadethView> {
         Image.asset('assets/images/hadith_logo.png'),
         Divider(),
         Text(
-          'عدد الأحاديث',
+         AppLocalizations.of(context)!.hadeth_name,
           style: MyTheme.lightMode.textTheme.titleLarge,
         ),
         Divider(),

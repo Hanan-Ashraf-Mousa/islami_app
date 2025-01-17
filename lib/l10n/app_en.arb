@@ -6,6 +6,14 @@
  "hadeth":"Hadeth",
  "sebha":"Sebha",
  "radio":"Radio",
-  "verses_number":"Verses Number"
+  "verses_number":"Verses Number",
+  "setting":"Settings",
+  "language":"Language",
+  "theme":"Theme Mode",
+  "arabic":"Arabic",
+   "english":"English",
+   "light":"Light",
+      "dark":" Dark"
+
 
 }

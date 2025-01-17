@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/home/hadeth/hadeth_view.dart';
 import 'package:islami_app/my_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/app_config_provider.dart';
 class HadethDetailsView extends StatelessWidget {
   static String routeName = "hadeth";
 
@@ -10,11 +13,13 @@ class HadethDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as Hadeth;
+    var provider = Provider.of<AppConfigProvider>(context);
+
     var size = MediaQuery.of(context).size;
     return Stack(
       children: [
         Image.asset(
-          'assets/images/main_background.png',
+          provider.isDark()?'assets/images/main_background_dark.png':'assets/images/main_background.png',
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.fill,
@@ -30,13 +35,13 @@ class HadethDetailsView extends StatelessWidget {
                 vertical: size.height * 0.04, horizontal: size.width * 0.02),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              color: MyTheme.whiteColor,
+              color: provider.isDark()?MyTheme.primaryColorDark:MyTheme.whiteColor,
             ),
             child: Column(
               children: [
                 Text(
                   args.title,
-                  style: MyTheme.lightMode.textTheme.titleSmall,
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
                 Divider(
                   thickness: 1,
@@ -46,7 +51,7 @@ class HadethDetailsView extends StatelessWidget {
                       itemCount: args.content.length,
                         itemBuilder: (context, index) => Text(
                               args.content[index],
-                              style: MyTheme.lightMode.textTheme.titleSmall,
+                              style: Theme.of(context).textTheme.titleSmall,
                           textDirection: TextDirection.rtl,
                             )))
               ],

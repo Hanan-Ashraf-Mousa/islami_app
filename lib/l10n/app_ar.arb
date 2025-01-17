@@ -6,5 +6,13 @@
  "hadeth":"الحديث",
  "sebha":"السبحة",
  "radio":"الإذاعة",
- "verses_number":"عدد الآيات"
+ "verses_number":"عدد الآيات",
+ "setting":"الإعدادات",
+ "language":"اللغة",
+   "theme":"النمط",
+   "arabic":"العربية",
+   "english":"الإنجليزية",
+   "light":"نهاري",
+   "dark":"ليلي"
+
 }

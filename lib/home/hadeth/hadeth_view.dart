@@ -24,7 +24,7 @@ class _HadethViewState extends State<HadethView> {
         Divider(),
         Text(
          AppLocalizations.of(context)!.hadeth_name,
-          style: MyTheme.lightMode.textTheme.titleLarge,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         Divider(),
         hadeth.isEmpty?CircularProgressIndicator(color: MyTheme.primaryColor,):Expanded(
@@ -33,7 +33,7 @@ class _HadethViewState extends State<HadethView> {
                 itemBuilder: (context, index) =>
                     InkWell(onTap: () {
                           Navigator.of(context).pushNamed(HadethDetailsView.routeName,arguments: hadeth[index]);
-                    }, child: Text(hadeth[index].title,style: MyTheme.lightMode.textTheme.titleSmall,textAlign: TextAlign.center,))))
+                    }, child: Text(hadeth[index].title,style: Theme.of(context).textTheme.titleSmall,textAlign: TextAlign.center,))))
       ],
     );
   }

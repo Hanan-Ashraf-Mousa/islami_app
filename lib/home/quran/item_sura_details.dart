@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../my_theme.dart';
 
@@ -12,7 +13,7 @@ class ItemSuraDetails extends StatelessWidget {
     return Text(
        '$name (${index+1}) ',
       textDirection: TextDirection.rtl,
-      style: MyTheme.lightMode.textTheme.titleSmall,
+      style: Theme.of(context).textTheme.titleSmall,
       textAlign: TextAlign.center,
     );
   }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/home/quran/quran_details_view.dart';
 import 'package:islami_app/my_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/provider/app_config_provider.dart';
+import 'package:provider/provider.dart';
 class QuranView extends StatelessWidget {
   QuranView({super.key});
 
@@ -129,7 +131,8 @@ class QuranView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var theme = MyTheme.lightMode;
+    var theme = Theme.of(context);
+    var provider = Provider.of<AppConfigProvider>(context);
     return Column(
       children: [
         Center(child: Image.asset("assets/images/quran_logo.png")),
@@ -144,7 +147,7 @@ class QuranView extends StatelessWidget {
             Container(
               width: 2,
               height: 40,
-              color: theme.primaryColor,
+              color: provider.isDark()?MyTheme.secondaryColorDark:theme.primaryColor,
             ),
             Text(
               AppLocalizations.of(context)!.sura_name,
@@ -173,7 +176,7 @@ class QuranView extends StatelessWidget {
                         Container(
                           width: 2,
                           height:20,
-                          color: theme.primaryColor,
+                          color: provider.isDark()?MyTheme.secondaryColorDark:theme.primaryColor,
                         ),
                         Text(
                           suraNames[index],

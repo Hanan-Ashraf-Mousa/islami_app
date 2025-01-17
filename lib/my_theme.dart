@@ -4,7 +4,11 @@ class MyTheme{
   static Color primaryColor = Color(0xffB7935F);
   static Color blackColor = Color(0xff242424);
   static Color whiteColor = Color(0xffF8F8F8);
- static ThemeData lightMode = ThemeData(
+  static Color primaryColorDark = Color(0xff141A2E);
+  static Color secondaryColorDark = Color(0xffFACC1D);
+
+
+  static ThemeData lightMode = ThemeData(
    primaryColor: primaryColor,
    scaffoldBackgroundColor: Colors.transparent,
    appBarTheme: AppBarTheme(
@@ -64,5 +68,68 @@ iconTheme: IconThemeData(
 
 
  );
-  static ThemeData darkMode = ThemeData();
+  static ThemeData darkMode = ThemeData(
+    primaryColor: primaryColorDark,
+    scaffoldBackgroundColor: Colors.transparent,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      centerTitle: true,
+      iconTheme: IconThemeData(
+        color:Colors.white ,
+        size: 30
+      ),
+        titleTextStyle: TextStyle(
+            fontSize:25,
+            fontFamily: "ElMessiri",
+            fontWeight: FontWeight.w600,
+            color:whiteColor
+        )
+    ),
+    dividerTheme: DividerThemeData(
+      color: secondaryColorDark,
+      thickness: 2
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: primaryColorDark,
+      selectedIconTheme: IconThemeData(
+        color: secondaryColorDark,
+        size: 40,
+      ),
+      unselectedIconTheme: IconThemeData(
+        color: whiteColor,
+        size: 30,
+      ),
+      selectedItemColor:  secondaryColorDark,
+      unselectedItemColor: whiteColor,
+      showUnselectedLabels: false,
+      showSelectedLabels: true,
+      type: BottomNavigationBarType.fixed,
+      selectedLabelStyle: TextStyle(
+        fontWeight: FontWeight.w400,
+        fontSize: 12,
+      ),
+    ),
+      textTheme: TextTheme(
+          titleLarge: TextStyle(
+              fontSize: 25,
+              fontFamily: "ElMessiri",
+              fontWeight: FontWeight.w600,
+              color: whiteColor
+          ),
+          titleMedium: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.w400,
+              color: whiteColor
+          ),
+          titleSmall: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w400,
+          )
+      ),
+    iconTheme: IconThemeData(
+        color:secondaryColorDark,
+        size: 30
+    ),
+  );
 }
